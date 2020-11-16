@@ -1,2 +1,25 @@
 *close-by-jumplist.txt* A plugin for close buffer by jumplist without break jumplist.
 
+
+                ,ad8888ba,  88888888ba          88   ~
+               d8"'    `"8b 88      "8b         88   ~
+              d8'           88      ,8P         88   ~
+              88            88aaaaaa8P'         88   ~
+              88            88""""""8b,         88   ~
+              Y8,           88      `8b         88   ~
+               Y8a.    .a8P 88      a8P 88,   ,d88   ~
+                `"Y8888Y"'  88888888P"   "Y8888P"    ~
+
+
+====================================================================
+Usage                                            *close-by-jumplist*
+
+The :BdeleteByJumplist command will help u close the buf by jumplist.
+
+====================================================================
+IgnoreBuffer                      *g:close_by_jumplist_ignore_files*
+You can ignore some buf with buffer's name contain the ignore file
+list. 
+
+:let g:close_by_jumplist_ignore_files = ['NERD_tree']
+Notice: ['NERD_tree'] as default
