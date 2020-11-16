@@ -1,7 +1,7 @@
 
 function! s:CheckIgnoreBuffer(buf_name) abort
   for i in g:close_by_jumplist_ignore_files
-    if a.buf_name =~ i
+    if a:buf_name =~ i
       return 1
     endif
   endfor
