@@ -1,5 +1,5 @@
 
-function! l:CheckIgnoreBuffer(buf_name) abort
+function! s:CheckIgnoreBuffer(buf_name) abort
   for i in g:close_by_jumplist_ignore_files
     if a.buf_name =~ i
       return 1
@@ -9,7 +9,7 @@ function! l:CheckIgnoreBuffer(buf_name) abort
   return 0
 endf
 
-function! l:GetPrevClosedBuffer() abort
+function! s:GetPrevClosedBuffer() abort
   " getjumplist default buffer need reverse
   let l = getjumplist()
   if len(l[0]) == 0
@@ -34,7 +34,7 @@ function! l:GetPrevClosedBuffer() abort
       let tBufname = bufname(i.bufnr) 
 
       " Buffer exists and not current buffer
-      if currBufferNr != i.bufnr && tBufname != '' && buflisted(i.bufnr) && !l:CheckIgnoreBuffer(tBufname)
+      if currBufferNr != i.bufnr && tBufname != '' && buflisted(i.bufnr) && !s:CheckIgnoreBuffer(tBufname)
         return jumpIndex - currJumpIdx
       endif
       let jumpIndex = jumpIndex + 1
@@ -46,7 +46,7 @@ function! l:GetPrevClosedBuffer() abort
 endf
 
 function! close_by_jumplist#common#close_by_jumplist() abort
-  let jumpTimes = l:GetPrevClosedBuffer()
+  let jumpTimes = s:GetPrevClosedBuffer()
   " echo 'jump times:' . jumpTimes
 
   " if we cannot find any buffer to close! (100 jumplist positions have been searched)
