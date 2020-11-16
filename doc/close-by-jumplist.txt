@@ -1,0 +1,2 @@
+*close-by-jumplist.txt* A plugin for close buffer by jumplist without break jumplist.
+
