@@ -36,3 +36,8 @@ Notice: ['NERD_tree'] as default
 > A: You can not use cmd key bindding, but there is a way to get around it.
 > U can edit item2 preferences, "keys" => "+", enter the key you want to bindding, and select "send" action. Map the key to "\<C-o>\<C-h>" (You can change it to whatever u want.). Then map it in u'r '.vimrc' or 'init.nvim'
 
+2. How to save buffer when close it?  
+A: Map it like:
+```
+nnoremap <leader>s :w<CR>:BdeleteByJumplist<CR>
+```
