@@ -14,7 +14,7 @@
 ====================================================================
 Usage                                            *close-by-jumplist*
 
-The :BdeleteByJumplist command will help u close the buf by jumplist.
+The :BDeleteByJumplist command will help u close the buf by jumplist.
 
 ====================================================================
 IgnoreBuffer                      *g:close_by_jumplist_ignore_files*
